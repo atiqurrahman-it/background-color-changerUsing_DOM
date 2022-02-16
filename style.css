@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* change_bd_color_div     Start      */
+.change_bg_color_div{
+  min-height: 100vh;
+  
+}
+
+.total_div{
+padding-top:30vh;
+}
+
+.change_bg_color_div h1{
+  text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue;
+}
+
+.submit_btn{
+  padding: 3px 15px;
+  font-size: 15px;
+  outline: none;
+  background: rgb(19 226 247);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border: none;
+  color: #fff;
+}
+.change-color{
+  padding: 15px;
+  font-size: 15px;
+  outline: none;
+  background: rgb(158, 208, 242);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border: none;
+  color: #fff;
+
+}
+
+.copy_btn{
+  padding: 3px 25px;
+  font-size: 15px;
+  outline: none !important;
+  background: rgb(19 226 247);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border: none !important;
+  color: #fff;
+}
+
+.change-color:hover{
+  color: #fff;
+  background-color: aqua;
+  
+}
+
+.change-color:focus{
+  outline: 2px solid #3c5bfa;
+  outline-offset: 3px;
+
+}
