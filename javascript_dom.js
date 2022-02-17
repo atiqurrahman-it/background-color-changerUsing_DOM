@@ -1,3 +1,4 @@
+let div=null;
 
 window.onload=() =>{
   main();
@@ -45,7 +46,7 @@ function setSuccessFor(input){
 
 }
 
- // submit color name ENd 
+ // submit color name ENd  -----------------
 
 
   // click  bgcolor change Start  
@@ -68,13 +69,47 @@ function setSuccessFor(input){
  // click  bgcolor change End   
 
 
-// copy show  bgcolor name (form clipbord)  Start 
+// copy show (input box)  bgcolor name (form clipbord)  Start 
 
 let copy_btn=document.querySelector('.copy_btn')
 copy_btn.addEventListener('click',function(){
 
   navigator.clipboard.writeText(bgcolor)
+  // color name show  idv 
+  if(div!=null){
+    div.remove()
+    div=null
+  }
+  genarate_tost_message(`${color_code_output.value} copied`);
 });
+// copy show (input box)  bgcolor name (form clipbord)  ENd
+
+
+// just when copy button click then show color code name and copied massege show   Start 
+function genarate_tost_message(msg){
+ //global a declar kora ahce  div 
+  div=document.createElement('div'); 
+
+  div.classList.add("Tost_message_position")
+  // differnce between add and toggle add just add but toggle if class jodi theke tahole remove  hobe  na thakle add hobe 
+  div.classList.toggle('Tost_message_animate_in') 
+  div.innerHTML=msg ;
+
+  document.body.appendChild(div);
+  div.addEventListener('click',function(){
+    div.classList.remove('Tost_message_animate_in')
+    div.classList.toggle('Tost_message_animate_out')
+
+    div.addEventListener('animationend',function(){
+      div.remove()
+      div=null
+    })
+  })
+
+ 
+}
+
+// just when copy button click then show color code name and copied massege show   Start 
 
 
 

@@ -41,6 +41,8 @@ padding-top:30vh;
 
 }
 
+
+
 .copy_btn{
   padding: 3px 25px;
   font-size: 15px;
@@ -51,6 +53,8 @@ padding-top:30vh;
   border: none !important;
   color: #fff;
 }
+
+
 
 .change-color:hover{
   color: #fff;
@@ -63,3 +67,53 @@ padding-top:30vh;
   outline-offset: 3px;
 
 }
+
+/* when copy button click then color code  show positon  start  */
+.Tost_message_position{
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-color: rgb(19 201 110);
+  color:#000;
+  border: 1px solid #fff;
+  padding:1rem 2rem ;
+  cursor: pointer;
+  z-index: 999;
+
+}
+
+.Tost_message_animate_in{
+
+  animation: text_animation_in 0.5s ease-in;
+}
+
+.Tost_message_animate_out{
+
+  animation: text_animation_out 0.5s ease-in;
+}
+
+@keyframes text_animation_in{
+  from{
+    transform: translateX(220px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+}
+
+@keyframes text_animation_out{
+  from{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to{
+    transform: translateX(220px);
+    opacity: 0;
+  }
+
+}
+
+/* when copy button click then color code  show positon  ENd   */
